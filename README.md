@@ -63,6 +63,6 @@ harisonchirchir25@gmail.com
 
 
 
-<img width="1024" height="1024" alt="Restricted-User-Logging" src="https://github.com/user-attachments/assets/d94fb5b8-234f-4a6a-b414-0d811cde2ec7" />
+<img width="400" height="400" alt="Restricted-User-Logging" src="https://github.com/user-attachments/assets/d94fb5b8-234f-4a6a-b414-0d811cde2ec7" />
 
   
