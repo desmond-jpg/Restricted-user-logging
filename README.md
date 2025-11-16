@@ -1,9 +1,14 @@
+<img width="400" height="400" alt="Restricted-User-Logging" src="https://github.com/user-attachments/assets/d94fb5b8-234f-4a6a-b414-0d811cde2ec7" />
+
+
 markdown
 
 # Restricted-user-logging
 
 Create a restricted Bash user with with activity logging on linux system
 This project demonstrates how to create a limited Bash shell user (`rbash`) in Linux, log their commands to `/var/log`, and ensure security by restricting shell access.
+
+markdown
 
 ---
 
@@ -82,6 +87,6 @@ harisonchirchir25@gmail.com
 
 
 
-<img width="400" height="400" alt="Restricted-User-Logging" src="https://github.com/user-attachments/assets/d94fb5b8-234f-4a6a-b414-0d811cde2ec7" />
+
 
   
