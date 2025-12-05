@@ -1,48 +1,33 @@
-<img width="400" height="400" alt="Restricted-User-Logging" src="https://github.com/user-attachments/assets/d94fb5b8-234f-4a6a-b414-0d811cde2ec7" />
 
-
-
-
-
-Restricted-user-logging
-
-markdown
+# Restricted-user-logging
 
 Create a restricted Bash user with with activity logging on linux system
 This project demonstrates how to create a limited Bash shell user (`rbash`) in Linux, log their commands to `/var/log`, and ensure security by restricting shell access.
 
-markdown
+Features:
 
----
-
-Features
-
--Restricted shell ("rbash")
-- Command logging using("script")
-- Secure logging storage in "/var/log"
-- Easy setup
-
----
+  -Restricted shell ("rbash")
+  - Command logging using("script")
+  - Secure logging storage in "/var/log"
+  - Easy setup
 
  Setup
 
-1. Create the user
+## step 1. Create the user
+
 ```bash
 sudo useradd -m -s /usr/bin/rbash desmondkrus # replace with your own name
 ```
 
----
-
-2. Create log file
+## step 2. Create log file
 ```bash
 sudo touch /var/log/desmondkrus_session.log
 sudo chown desmondkrus:desmondkrus /var/log/desmondkrus_session.log
 sudo chmod 600 /var/log/desmondkrus_session.log
 ```
 
----
+## step 3. Setup the restricted shell with logging
 
-3. Setup the restricted shell with logging
 ```bash
 sudo bash -c 'cat <<EOF > /usr/local/bin/logrbash
 #!/bin/bash
@@ -50,8 +35,6 @@ LOGFILE="/var/log/desmondkrus_session.log"
 exec /usr/bin/script -q -f -c "/bin/rbash" "$LOGFLE"
 EOF'
 ```
-
----
 
 After that run these commands
 
@@ -61,9 +44,7 @@ sudo usermod -s /usr/local/bin/logrbash desmond
 krus
 ```
 
----
-
-4. Usage
+## step 4. Usage
 
 Login as the restricted User:
 
@@ -74,15 +55,11 @@ whoami
 exit
 ```
 
----
-
 Verify the logged activity
 
 ```bash
 sudo cat /var/log/desmondkrus_session.log
 ```
-
----
 
 License
 This project is license under the MIT license
